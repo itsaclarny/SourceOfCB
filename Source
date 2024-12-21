@@ -34,7 +34,6 @@ local aa_target = nil
 local isUnlocked = nil
 local skins = {}
 
-local weaponsBackup = game.ReplicatedStorage.Weapons:Clone()
 
 local oldcreatebullethole = client.createbullethole
 
@@ -250,7 +249,7 @@ function getWatermarkArgument(arg,Fps)
 		DisplayNick = "Tokyo >-<";
 		FPS = tostring(Fps) .. " FPS";
 		Time = getTime();
-		Name = "denta.cc | cracked";
+		Name = "denta.cc";
 		Ping = tostring(math.floor(Ping)) .. " ms";
 	}
 
@@ -274,7 +273,7 @@ WaterFrame.Position = UDim2.new(0.77, 0, 0, -20)
 WaterFrame.Size = UDim2.new(0, 383, 0, 20)
 
 UIGradient__2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(61, 61, 61)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(20, 20, 20))}
-UIGradient__2.Rotation = 90
+UIGradient__2.Rotation = 70
 UIGradient__2.Parent = WaterFrame
 
 SuperLine.Name = "SuperLine"
@@ -293,8 +292,8 @@ _Text.BackgroundTransparency = 1.000
 _Text.Position = UDim2.new(0.0170829911, 0, 0.0299987756, 0)
 _Text.Size = UDim2.new(0.96, 0, 0.919999719, 0)
 _Text.ZIndex = 0
-_Text.Font = Enum.Font.RobotoMono
-_Text.Text = "denta.cc | crack | 16 October 2022"
+_Text.Font = Enum.Font.TitilliumWeb
+_Text.Text = "денточка | 18.12.2024 Build"
 _Text.TextColor3 = Color3.fromRGB(255, 255, 255)
 _Text.TextSize = 16.000
 
@@ -383,7 +382,7 @@ function library:CreateWindow(title)
 	Title.Position = UDim2.new(0, 0, -0.0688705221, 0)
 	Title.Size = UDim2.new(0.235759497, 0, 0.121212125, 0)
 	Title.ZIndex = 3
-	Title.Font = Enum.Font.TitilliumWeb
+	Title.Font = Enum.Font.RobotoMono
 	Title.Text = title
 	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Title.TextScaled = true
@@ -558,8 +557,8 @@ function library:CreateWindow(title)
 	Keybinds_text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Keybinds_text.BackgroundTransparency = 1.000
 	Keybinds_text.Size = UDim2.new(1, 0, 1, 0)
-	Keybinds_text.Font = Enum.Font.TitilliumWeb
-	Keybinds_text.Text = "keybinds"
+	Keybinds_text.Font = Enum.Font.RobotoMono
+	Keybinds_text.Text = "Кейбинды"
 	Keybinds_text.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Keybinds_text.TextScaled = true
 	Keybinds_text.TextSize = 14.000
@@ -660,7 +659,7 @@ function library:CreateWindow(title)
 		tabtabtab.Size = UDim2.new(0.949999988, 0, 0, 35)
 		tabtabtab.Font = Enum.Font.TitilliumWeb
 		tabtabtab.Text = title
-		tabtabtab.TextColor3 = Color3.fromRGB(166, 166, 166)
+		tabtabtab.TextColor3 = Color3.fromRGB(255, 255, 255)
 		tabtabtab.TextScaled = true
 		tabtabtab.TextSize = 14.000
 		tabtabtab.TextWrapped = true
@@ -1892,13 +1891,13 @@ function library:CreateWindow(title)
 	return windowLib
 end
 
-local Window = library:CreateWindow("denta.cc")
+local Window = library:CreateWindow("Дента <3")
 local UILib = library.mainlib
-local RageTab = Window:CreateTab("Rage")
-local LegitTab = Window:CreateTab("Legit")
-local VisualsTab = Window:CreateTab("Visuals")
-local MiscTab = Window:CreateTab("Another")
-local SettingsTab = Window:CreateTab("Settings")
+local RageTab = Window:CreateTab("Рейдж")
+local LegitTab = Window:CreateTab("Легит")
+local VisualsTab = Window:CreateTab("Визуалы")
+local MiscTab = Window:CreateTab("Остальное")
+local SettingsTab = Window:CreateTab("Настройки")
 
 local RageTabFakelags = RageTab:CreateSection("Fakelag")
 
@@ -1928,7 +1927,7 @@ local SettingsTabLuas = SettingsTab:CreateSection("Luas", "Right")
 MiscTabMovement:CreateToggle("Bhop", "bhop_enabled"):AddKeybind()
 MiscTabMovement:CreateDropdown("Bhop type", "bhop_type", {"cframe", "gyro", "velocity"})
 MiscTabMovement:CreateDropdown("Bhop style", "bhop_style", {"space", "autohop"})
-MiscTabMovement:CreateSlider("Bhop speed", "bhop_speed", {min = 15, max = 600, default = 15})
+MiscTabMovement:CreateSlider("Bhop speed", "bhop_speed", {min = 1, max = 200, default = 9})
 MiscTabMovement:CreateSlider("Bhop modifier", "bhop_mod", {min = 0, max = 30, default = 0})
 MiscTabMovement:CreateToggle("Edge bug", "move_edge_bug")
 MiscTabMovement:CreateToggle("Slidewalk", "move_slidewalk")
@@ -1943,7 +1942,7 @@ LegitTabAimbot:CreateToggle("Enabled", "aimbot_enabled")
 LegitTabAimbot:CreateToggle("Silent", "aimbot_silent")
 LegitTabAimbot:CreateSlider("Smoothness", "aimbot_smooth", {min = 0, max = 10, default = 0})
 LegitTabAimbot:CreateToggle("Draw FOV", "aimbot_fov")
-LegitTabAimbot:CreateSlider("FOV", "aimbot_fov", {min = 10, max = 420, default = 80})
+LegitTabAimbot:CreateSlider("FOV", "aimbot_fov", {min = 10, max = 100, default = 80})
 
 MiscTabServer:CreateToggle("Kill say", "kill_say")
 MiscTabServer:CreateToggle("Server smoker", "server_smoker")
@@ -2271,7 +2270,7 @@ end)
 SettingsTabConfig:CreateTextbox("Config name", "cfg_name")
 
 SettingsTabConfig:CreateButton("Load config", function()
-	local path = "denta.cc/cfgs/" .. library.flags["cfg_name"] .. ".dead"
+	local path = "denta.cc/cfgs/" .. library.flags["cfg_name"] .. ".denta"
 	if isfile(path) then
 		local base64_decode = (syn ~= nil and syn.crypt.base64.decode or Krnl.Base64.Decode)
 		Window:LoadConfig(loadstring("return " .. base64_decode(readfile(path)))())
@@ -2279,7 +2278,7 @@ SettingsTabConfig:CreateButton("Load config", function()
 end)
 
 SettingsTabConfig:CreateButton("Save config", function()
-	local path = "denta.cc/cfgs/" .. library.flags["cfg_name"] .. ".dead"
+	local path = "denta.cc/cfgs/" .. library.flags["cfg_name"] .. ".denta"
 	local base64_encode = (syn ~= nil and syn.crypt.base64.encode or Krnl.Base64.Encode)
 	writefile(path, base64_encode(Window:GetConfig()))
 end)
